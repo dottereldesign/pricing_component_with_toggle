@@ -163,6 +163,7 @@ h2 {
   align-items: center;
   width: min(100%, 350px);
   border-radius: 10px;
+  padding: 0 16px 0 16px;
 }
 
 .card:not(:first-child) {
@@ -174,7 +175,7 @@ h2 {
 }
 
 .card:nth-child(2) {
-  background-color: var(--clr-gradient-100);
+  background-color: var(--clr-gradient-200);
 }
 
 .card_currency {
@@ -182,12 +183,24 @@ h2 {
   color: var(--clr-neutral-400);
   font-weight: var(--fw-bold);
   margin-top: 16px;
+  display: flex;
+  align-items: center;
+}
+
+.card:nth-child(even) .card_currency,
+.card:nth-child(even) .card_feature p {
+  color: white;
+}
+
+.card_currency span {
+  font-size: var(--fs-700);
+  padding-right: 8px;
 }
 
 .card_feature {
   margin-top: 16px;
   border: 1px solid var(--clr-neutral-200);
-  width: 90%;
+  width: calc(100% - 8px);
   border-left: 0;
   border-right: 0;
   padding: 16px 0;
@@ -211,6 +224,16 @@ h2 {
   text-align: center;
 }
 
+.card:nth-child(even) p:nth-child(even) {
+  border-color: var(--clr-neutral-100);
+}
+
+.card:nth-child(even) .card_feature {
+  border: 1px solid var(--clr-neutral-100);
+  border-left: 0;
+  border-right: 0;
+}
+
 .card_feature p:first-child {
   padding-bottom: 16px;
 }
@@ -220,6 +243,24 @@ h2 {
 }
 
 .card a {
-  display: inline-block;
-  margin-top: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 32px 0 32px 0;
+  width: 100%;
+  text-align: center;
+  text-decoration: none;
+  background-color: var(--clr-gradient-200);
+  border-radius: 6px;
+  height: 44px;
+  color: white;
+  font-size: var(--fs-400);
+  text-transform: uppercase;
+  font-weight: var(--fw-semi-bold);
+  letter-spacing: 1.2px;
+}
+
+.card:nth-child(even) a {
+  background-color: white;
+  color: var(--clr-gradient-200);
 }
