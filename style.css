@@ -4,14 +4,14 @@
 
   --clr-neutral-100: hsl(240, 78%, 98%);
   --clr-neutral-200: hsl(234, 14%, 74%);
-  --clr-neutral-300: hsl(233, 13%, 49%);
+  --clr-neutral-300: hsl(234, 13%, 49%);
   --clr-neutral-400: hsl(232, 13%, 33%);
 
   --ff-primary-100: "Montserrat", sans-serif;
 
   --fw-regular: 400;
   --fw-medium: 500;
-  --fw-semiS-bold: 600;
+  --fw-semi-bold: 600;
   --fw-bold: 700;
 
   --fs-300: clamp(0.7rem, 0.66rem + 0.2vw, 0.8rem);
@@ -94,4 +94,45 @@ select {
 * {
   font-size: inherit;
   font-family: var(--ff-primary-100);
+}
+
+/* main */
+main {
+  max-width: 1110px;
+  margin: 64px auto 0 auto;
+}
+
+/* header */
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+h1 {
+  font-size: var(--fs-700);
+  color: var(--clr-neutral-300);
+  font-weight: var(--fw-bold);
+}
+
+.header_btn-feature {
+  display: flex;
+  margin-top: 32px;
+}
+
+.header_btn-feature p {
+  font-size: var(--fs-500);
+  color: var(--clr-neutral-200);
+  font-weight: var(--fw-semi-bold);
+}
+
+.header_btn-feature button {
+  margin: 0 16px 0 16px;
+}
+
+/* section */
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 48px auto 0 auto;
 }
