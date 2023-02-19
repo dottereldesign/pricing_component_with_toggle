@@ -61,6 +61,7 @@ body {
 }
 /* A elements that don't have a class get default styles */
 a:not([class]) {
+  -webkit-text-decoration-skip: ink;
   text-decoration-skip-ink: auto;
 }
 /* Make images easier to work with */
@@ -84,7 +85,9 @@ select {
   *,
   *::before,
   *::after {
+    -webkit-animation-duration: 0.01ms !important;
     animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
@@ -94,6 +97,10 @@ select {
 * {
   font-size: inherit;
   font-family: var(--ff-primary-100);
+}
+
+body {
+  background-color: var(--clr-neutral-100);
 }
 
 /* main */
@@ -134,5 +141,85 @@ section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 48px auto 0 auto;
+  margin: 48px auto 48px auto;
+  padding: 0 16px;
+}
+
+/* article (card) */
+h2 {
+  font-size: var(--fs-600);
+  color: var(--clr-neutral-300);
+  font-weight: var(--fw-bold);
+  margin-top: 24px;
+}
+
+.card:nth-child(2) > h2 {
+  color: white;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: min(100%, 350px);
+  border-radius: 10px;
+}
+
+.card:not(:first-child) {
+  margin-top: 32px;
+}
+
+.card:not(:nth-child(2)) {
+  background-color: white;
+}
+
+.card:nth-child(2) {
+  background-color: var(--clr-gradient-100);
+}
+
+.card_currency {
+  font-size: var(--fs-900);
+  color: var(--clr-neutral-400);
+  font-weight: var(--fw-bold);
+  margin-top: 16px;
+}
+
+.card_feature {
+  margin-top: 16px;
+  border: 1px solid var(--clr-neutral-200);
+  width: 90%;
+  border-left: 0;
+  border-right: 0;
+  padding: 16px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card_feature p {
+  font-size: var(--fs-500);
+  color: var(--clr-neutral-300);
+  font-weight: var(--fw-bold);
+}
+
+.card_feature p:nth-child(even) {
+  padding: 16px 0;
+  border: 1px solid var(--clr-neutral-200);
+  border-left: 0;
+  border-right: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.card_feature p:first-child {
+  padding-bottom: 16px;
+}
+
+.card_feature p:last-child {
+  padding-top: 16px;
+}
+
+.card a {
+  display: inline-block;
+  margin-top: 24px;
 }
