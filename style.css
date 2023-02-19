@@ -11,7 +11,7 @@
 
   --fw-regular: 400;
   --fw-medium: 500;
-  --fw-semi-bold: 600;
+  --fw-semiS-bold: 600;
   --fw-bold: 700;
 
   --fs-300: clamp(0.7rem, 0.66rem + 0.2vw, 0.8rem);
